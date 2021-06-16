@@ -7,10 +7,10 @@ import androidx.room.*
 @Dao
 interface DBDao{
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertDBObjects(dBObjects: List<DBObject>)
+     fun insertDBObjects(dBObjects: List<DBObject>)
 
     @Query("SELECT * from DBObject")
-    fun getAllDBObjects(): LiveData<List<DBObject>>
+     fun getAllDBObjects(): LiveData<List<DBObject>>
 }
 
 @Database(entities = [DBObject::class], version = 1, exportSchema = false)
