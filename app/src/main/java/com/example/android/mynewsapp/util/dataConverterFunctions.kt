@@ -1,7 +1,7 @@
 package com.example.android.mynewsapp.util
 
-import com.example.android.mynewsapp.database.DBObject
-import com.example.android.mynewsapp.retrofit.NetworkedArticleContainer
+import com.example.android.mynewsapp.dataLayer.database.DBObject
+import com.example.android.mynewsapp.dataLayer.retrofit.NetworkedArticleContainer
 
 
 fun NetworkedArticleContainer.toDBObject(): List<DBObject>{

@@ -1,4 +1,4 @@
-package com.example.android.mynewsapp.retrofit
+package com.example.android.mynewsapp.dataLayer.retrofit
 
 import com.squareup.moshi.JsonClass
 

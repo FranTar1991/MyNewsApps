@@ -1,4 +1,4 @@
-package com.example.android.mynewsapp.database
+package com.example.android.mynewsapp.dataLayer.database
 
 import android.content.Context
 import androidx.lifecycle.LiveData
@@ -9,8 +9,14 @@ interface DBDao{
     @Insert(onConflict = OnConflictStrategy.REPLACE)
      fun insertDBObjects(dBObjects: List<DBObject>)
 
-    @Query("SELECT * from DBObject")
+     @Insert(onConflict = OnConflictStrategy.REPLACE)
+     suspend fun insertDbObject(dbObject: DBObject): Long
+
+    @Query("SELECT * from object_entity")
      fun getAllDBObjects(): LiveData<List<DBObject>>
+
+     @Query("SELECT * from object_entity WHERE id= :articleId")
+     suspend fun getDbObjectById(articleId: String): DBObject
 }
 
 @Database(entities = [DBObject::class], version = 1, exportSchema = false)
@@ -24,7 +30,7 @@ abstract class MainDBForObjects: RoomDatabase(){
 
         fun getDatabaseInstance (context: Context): MainDBForObjects{
 
-            synchronized(this){
+          return  synchronized(this){
                 var instance = INSTANCE
                 if (instance == null){
 
@@ -35,7 +41,7 @@ abstract class MainDBForObjects: RoomDatabase(){
                         .build()
                     INSTANCE = instance
                 }
-                return instance
+              instance
             }
 
 
@@ -43,6 +49,34 @@ abstract class MainDBForObjects: RoomDatabase(){
 
 
     }
+//    companion object {
+//
+//        @Volatile
+//        private var sInstance: MainDBForObjects? = null
+//
+//        @JvmStatic
+//        fun getInstance(context: Context): MainDBForObjects {
+//            if (sInstance != null) {
+//                return sInstance
+//            }
+//
+//            return synchronized(this) {
+//                var instance = sInstance
+//                if (instance == null) {
+//                    instance = Room.databaseBuilder(
+//                        context.applicationContext,
+//                        MainDBForObjects::class.java,
+//                        "sleep_history_database"
+//                    )
+//                        .fallbackToDestructiveMigration()
+//                        .build()
+//                    sInstance = instance
+//                }
+//
+//                instance
+//            }
+//        }
+//    }
 }
 
 

@@ -1,4 +1,4 @@
-package com.example.android.mynewsapp.retrofit
+package com.example.android.mynewsapp.dataLayer.retrofit
 
 import com.squareup.moshi.Moshi
 import retrofit2.Retrofit
@@ -11,7 +11,7 @@ import retrofit2.http.Query
 private const val BASE_URL="https://newsapi.org/v2/"
 private val moshi = Moshi.Builder().build()
 
-private val retrofit = Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(
+private val retrofitServiceCreator = Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(
     MoshiConverterFactory.create(moshi)).build()
 
 interface RetrofitService{
@@ -22,7 +22,9 @@ interface RetrofitService{
 }
 
 object RetrofitObject{
+
 val RETROFIT_SERVICE_OBJECT: RetrofitService by lazy {
-    retrofit.create(RetrofitService::class.java)
+    retrofitServiceCreator.create(RetrofitService::class.java)
 }
+
 }
