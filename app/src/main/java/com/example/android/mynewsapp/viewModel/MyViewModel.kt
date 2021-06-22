@@ -1,8 +1,7 @@
-package com.example.android.mynewsapp.ViewModel
+package com.example.android.mynewsapp.viewModel
 
 import android.util.Log
 import androidx.lifecycle.*
-import com.example.android.mynewsapp.dataLayer.database.DBObject
 import com.example.android.mynewsapp.repo.RepoInterface
 import com.example.android.mynewsapp.repo.Repository
 import com.example.android.mynewsapp.util.DomainObject

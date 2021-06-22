@@ -12,8 +12,9 @@ class Repository(
     private val remoteDataSource: DataSource,
     private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO) : RepoInterface {
 
-
-    override fun getArticlesFromDB(): LiveData<List<DomainObject>> = localDataSource.getData()
+    override fun getArticlesFromDB(): LiveData<List<DomainObject>>{
+        return localDataSource.getData()
+    }
 
      override suspend fun setDataFromNetwork (){
          withContext(ioDispatcher){

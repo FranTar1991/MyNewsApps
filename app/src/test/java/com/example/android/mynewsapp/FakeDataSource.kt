@@ -17,9 +17,11 @@ class FakeDataSource(
             it.fromDBObjectToDomainObject()
         }
 
-    override fun getData(): LiveData<List<DomainObject>> {
+    override fun getData(): LiveData<List<DomainObject>>{
         return livedataFromFakeSource
     }
+
+
     override suspend fun insertNetworkDataIntoLocalDb() {
         val list =  _livedataFromFakeSource.value
          list?.addAll(fakeData)

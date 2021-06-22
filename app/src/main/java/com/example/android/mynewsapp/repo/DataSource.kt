@@ -1,6 +1,7 @@
 package com.example.android.mynewsapp.repo
 
 import androidx.lifecycle.LiveData
+import com.example.android.mynewsapp.dataLayer.database.DBObject
 import com.example.android.mynewsapp.util.DomainObject
 
 interface DataSource {

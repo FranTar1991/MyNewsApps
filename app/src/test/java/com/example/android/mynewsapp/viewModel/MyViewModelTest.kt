@@ -1,4 +1,4 @@
-package com.example.android.mynewsapp.ViewModel
+package com.example.android.mynewsapp.viewModel
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.test.filters.SmallTest
@@ -7,17 +7,13 @@ import com.example.android.mynewsapp.MainCoroutineRule
 import com.example.android.mynewsapp.dataLayer.database.DBObject
 import com.example.android.mynewsapp.getOrAwaitValue2
 import com.example.android.mynewsapp.repo.RepoInterface
-import com.example.android.mynewsapp.repo.Repository
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest
-import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 
 import org.hamcrest.MatcherAssert.assertThat
-import org.hamcrest.core.IsEqual.equalTo
-import org.hamcrest.core.IsNull.notNullValue
 import org.hamcrest.text.IsEqualIgnoringCase
 
 @ExperimentalCoroutinesApi
