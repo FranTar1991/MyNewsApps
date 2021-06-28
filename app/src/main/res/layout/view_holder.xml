@@ -10,7 +10,7 @@
 
         <variable
             name="clickListener"
-            type="com.example.android.mynewsapp.AllObjectsAdapter.OnObjectClickListener" />
+            type="com.example.android.mynewsapp.util.AllObjectsAdapter.OnObjectClickListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

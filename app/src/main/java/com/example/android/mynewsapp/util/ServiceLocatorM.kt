@@ -21,9 +21,8 @@ object ServiceLocatorM {
 
     private fun createRepository(context: Context): Repository {
 
-        return Repository(
+        return Repository(LocalDataSource(MainDBForObjects.getDatabaseInstance(context)),
             RemoteDataSource(MainDBForObjects.getDatabaseInstance(context)),
-            LocalDataSource(MainDBForObjects.getDatabaseInstance(context))
         )
     }
 

@@ -84,7 +84,7 @@ class DAOInstTest {
       val id =  dbDao.insertDbObject(toInsert)
 
         // When - get get the object by ID from the DB
-        val loaded = dbDao.getDbObjectById(toInsert.id)
+        val loaded = dbDao.getDbObjectById(id.toInt())
 
 
         //Then when the object is called by its ID we get the same info entered

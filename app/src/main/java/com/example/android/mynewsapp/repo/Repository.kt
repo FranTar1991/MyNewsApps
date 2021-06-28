@@ -1,7 +1,10 @@
 package com.example.android.mynewsapp.repo
 
+import android.util.Log
 import androidx.lifecycle.LiveData
+import com.example.android.mynewsapp.dataLayer.retrofit.RetrofitObject
 import com.example.android.mynewsapp.util.DomainObject
+import com.example.android.mynewsapp.util.toDBObject
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -17,8 +20,12 @@ class Repository(
     }
 
      override suspend fun setDataFromNetwork (){
+
          withContext(ioDispatcher){
-             launch { remoteDataSource.insertNetworkDataIntoLocalDb() }
+             launch {
+
+                 remoteDataSource.insertNetworkDataIntoLocalDb()
+             }
          }
 
     }

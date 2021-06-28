@@ -16,7 +16,7 @@ interface DBDao{
      fun getAllDBObjects(): LiveData<List<DBObject>>
 
      @Query("SELECT * from object_entity WHERE id= :articleId")
-     suspend fun getDbObjectById(articleId: String): DBObject
+     suspend fun getDbObjectById(articleId: Int): DBObject
 }
 
 @Database(entities = [DBObject::class], version = 1, exportSchema = false)

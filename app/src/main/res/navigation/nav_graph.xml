@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/allObjectsFragment"
-        android:name="com.example.android.mynewsapp.AllObjectsFragment"
+        android:name="com.example.android.mynewsapp.util.AllObjectsFragment"
         android:label="fragment_all_objects"
         tools:layout="@layout/fragment_all_objects" >
         <action

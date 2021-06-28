@@ -16,6 +16,7 @@ fun NetworkedArticleContainer.toDBObject(): List<DBObject>{
 fun List<DBObject>.fromDBObjectToDomainObject(): List<DomainObject>{
     return map {
         DomainObject(
+            id = it.id,
             title = it.title,
             content = it.content,
             description = it.description,

@@ -6,10 +6,10 @@ import java.util.*
 
 @Entity(tableName = "object_entity")
 data class DBObject(
-    @PrimaryKey (autoGenerate = false)
-    val id: String = UUID.randomUUID().toString(),
-    val title: String,
-    val description: String,
-    val urlToImage: String,
-    val content: String,
+    @PrimaryKey (autoGenerate = true)
+    val id: Int = 0,
+    val title: String?,
+    val description: String?,
+    val urlToImage: String?,
+    val content: String?,
 )

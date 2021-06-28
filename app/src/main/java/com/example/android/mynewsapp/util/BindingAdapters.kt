@@ -1,10 +1,11 @@
-package com.example.android.mynewsapp
+package com.example.android.mynewsapp.util
 
 import android.widget.ImageView
 import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.android.mynewsapp.util.DomainObject
+import com.example.android.mynewsapp.GlideApp
+import com.example.android.mynewsapp.R
 
 @BindingAdapter("imageUrl")
 fun bindImage(imgView: ImageView, imageUrl: String?){

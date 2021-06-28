@@ -1,15 +1,12 @@
-package com.example.android.mynewsapp
+package com.example.android.mynewsapp.util
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android.mynewsapp.databinding.ViewHolderBinding
-import com.example.android.mynewsapp.util.DomainObject
 
 class AllObjectsAdapter(private val onObjectClickListener: OnObjectClickListener):
     ListAdapter<DomainObject, AllObjectsAdapter.AllObjectsViewHolder>(DiffUtilCallBack()) {
@@ -33,7 +30,7 @@ class AllObjectsAdapter(private val onObjectClickListener: OnObjectClickListener
         }
 
         companion object {
-            fun from(parent: ViewGroup): AllObjectsViewHolder{
+            fun from(parent: ViewGroup): AllObjectsViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding =ViewHolderBinding.inflate(layoutInflater,parent,false)
                 return AllObjectsViewHolder(binding)

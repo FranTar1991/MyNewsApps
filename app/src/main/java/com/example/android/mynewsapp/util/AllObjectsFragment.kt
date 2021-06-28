@@ -1,4 +1,4 @@
-package com.example.android.mynewsapp
+package com.example.android.mynewsapp.util
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import com.example.android.mynewsapp.MyNewsApp
+import com.example.android.mynewsapp.R
 import com.example.android.mynewsapp.viewModel.Factory
 import com.example.android.mynewsapp.viewModel.MyViewModel
 import com.example.android.mynewsapp.databinding.FragmentAllObjectsBinding
