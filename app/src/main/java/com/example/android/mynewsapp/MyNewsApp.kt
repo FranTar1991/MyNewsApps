@@ -1,11 +1,11 @@
 package com.example.android.mynewsapp
 
 import android.app.Application
-import com.example.android.mynewsapp.repo.Repository
-import com.example.android.mynewsapp.util.ServiceLocatorM
+import com.example.android.mynewsapp.allFragments.repo.RepoInterface
+import com.example.android.mynewsapp.allFragments.util.ServiceLocatorM
 
 class MyNewsApp: Application() {
-    val repo: Repository
+    val repo: RepoInterface
     get() = ServiceLocatorM.provideRepository(this)
 
 }

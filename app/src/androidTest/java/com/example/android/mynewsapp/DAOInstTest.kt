@@ -1,15 +1,14 @@
 package com.example.android.mynewsapp
 
 
-import android.util.Log
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SmallTest
-import com.example.android.mynewsapp.dataLayer.database.DBDao
-import com.example.android.mynewsapp.dataLayer.database.DBObject
-import com.example.android.mynewsapp.dataLayer.database.MainDBForObjects
+import com.example.android.mynewsapp.allFragments.dataLayer.database.DBDao
+import com.example.android.mynewsapp.allFragments.dataLayer.database.DBObject
+import com.example.android.mynewsapp.allFragments.dataLayer.database.MainDBForObjects
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest
 import org.hamcrest.CoreMatchers.`is`

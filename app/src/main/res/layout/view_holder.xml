@@ -6,11 +6,11 @@
     <data>
         <variable
             name="object"
-            type="com.example.android.mynewsapp.util.DomainObject" />
+            type="com.example.android.mynewsapp.allFragments.dataLayer.DomainObject" />
 
         <variable
             name="clickListener"
-            type="com.example.android.mynewsapp.util.AllObjectsAdapter.OnObjectClickListener" />
+            type="com.example.android.mynewsapp.allFragments.ui.AllObjectsAdapter.OnObjectClickListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

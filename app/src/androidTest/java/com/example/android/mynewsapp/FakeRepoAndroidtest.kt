@@ -8,7 +8,7 @@ import com.example.android.mynewsapp.allFragments.repo.RepoInterface
 import com.example.android.mynewsapp.allFragments.dataLayer.DomainObject
 import com.example.android.mynewsapp.allFragments.util.fromDBObjectToDomainObject
 
-class FakeRepo(private val fakeLocal: MutableList<DBObject>,
+class FakeRepoAndroidTest(private val fakeLocal: MutableList<DBObject>,
                private val fakeRemote: MutableList<DBObject>): RepoInterface {
 
     private val _livedataFromFakeSource= MutableLiveData<MutableList<DBObject>>(fakeLocal)
